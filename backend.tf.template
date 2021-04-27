@@ -1,0 +1,12 @@
+// This is the template for a terraform backend using an AWS S3 bucket.
+// Replacing the bucket and region value is mandatory, replacing the key,
+// which is the name the state file will be saved as, is optional.
+
+terraform {
+  backend "s3" {
+    bucket = "MY_BUCKET"
+    encrypt = true
+    key     = "terraform_webserver.tfstate"
+    region  = "MY_AWS_REGION"
+  }
+}
